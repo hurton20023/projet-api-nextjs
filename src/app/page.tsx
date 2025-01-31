@@ -247,30 +247,29 @@ export default function LoginPage() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <button type="submit" className="w-full border p-2 rounded bg-gray-200" disabled={isLoading}>
                     {isLoading ? "Connexion en cours..." : "Se connecter"}
-                  </Button>
-                  <Button
+                  </button>
+                  <button
                     onClick={handleSubmitGoogleLogin}
-                    variant="outline"
-                    className="w-full"
+                    className="w-full border p-2 rounded"
                   >
                     Connexion avec Google
-                  </Button>
-                  <Button
+                  </button>
+
+                  <button
                     onClick={handleSubmitGithubLogin}
-                    variant="outline"
-                    className="w-full"
+                    className="w-full border p-2 rounded"
                   >
                     Connexion avec GitHub
-                  </Button>
-                  <Button
+                  </button>
+
+                  <button
                     onClick={handleSubmitTwitterLogin}
-                    variant="outline"
-                    className="w-full"
+                    className="w-full border p-2 rounded"
                   >
                     Connexion avec Twitter
-                  </Button>
+                  </button>
                   <div className="mt-4 text-center text-sm">
                     Vous n&apos;avez pas de compte ?{" "}
                     <a
