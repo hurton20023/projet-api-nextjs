@@ -1,6 +1,6 @@
 "use client";
 
-import { signIn, useSession } from "next-auth/react";
+import { signIn, useSession, getProviders } from "next-auth/react";
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -247,10 +247,15 @@ export default function LoginPage() {
                       required
                     />
                   </div>
-                  <button type="submit" className="w-full border p-2 rounded bg-gray-200" disabled={isLoading}>
+                  <button
+                    type="submit"
+                    className="w-full border p-2 rounded bg-gray-200"
+                    disabled={isLoading}
+                  >
                     {isLoading ? "Connexion en cours..." : "Se connecter"}
                   </button>
                   <button
+                    type="button"
                     onClick={handleSubmitGoogleLogin}
                     className="w-full border p-2 rounded"
                   >
@@ -258,6 +263,7 @@ export default function LoginPage() {
                   </button>
 
                   <button
+                    type="button"
                     onClick={handleSubmitGithubLogin}
                     className="w-full border p-2 rounded"
                   >
@@ -265,6 +271,7 @@ export default function LoginPage() {
                   </button>
 
                   <button
+                    type="button"
                     onClick={handleSubmitTwitterLogin}
                     className="w-full border p-2 rounded"
                   >
