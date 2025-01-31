@@ -31,9 +31,9 @@
     Démarrer le serveur de développement :
     Une fois les étapes précédentes terminées, vous pouvez démarrer le serveur de développement en exécutant :
 
-        ```bash
-        npm run dev
-        ```
+    ```bash
+    npm run dev
+    ```
 
     Cela lancera le serveur de développement Next.js, et vous pourrez accéder à votre application en ouvrant http://localhost:3000 dans votre navigateur.
 
