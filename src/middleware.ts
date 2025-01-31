@@ -43,7 +43,19 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (request.nextUrl.pathname.startsWith("/api/")) {
+  if (request.nextUrl.pathname.startsWith("/api/users")) {
+    if (request.method === "POST") {
+      return NextResponse.next();
+    }
+    if (!token) {
+      return NextResponse.json(
+        { success: false, status: 401, error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+  }
+
+  if (request.nextUrl.pathname.startsWith("/api/ads")) {
     return NextResponse.json(
       { success: false, status: 401, error: "Unauthorized" },
       { status: 401 }
